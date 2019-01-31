@@ -1,0 +1,4 @@
+cd Program Files\MongoDB\Server\3.4\bin
+mongo.exe 
+mongo.exe --eval "use DatabaseName var currentDate = new Date() var year = currentDate.getFullYear() var month = currentDate.getMonth() var day = currentDate.getDate() var oldDate = new Date(year - 11, month, day); db.Rxclaims.remove({ original_service_date : {"$lt" : ISODate(oldDate) } })"
+pause
